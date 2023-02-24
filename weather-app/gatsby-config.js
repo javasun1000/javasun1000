@@ -27,21 +27,21 @@ module.exports = {
       "path": "./src/pages/"
     },
     __key: "pages"
-  },
-  //https://www.npmjs.com/package/gatsby-source-multi-api
-  {
-    resolve: 'gatsby-source-multi-api',
-    options: {
-      "name": "testQ",
-      apis: [
-        {
-          //multiApi
-          endpoints: ["42,-71","100,10"],
-          baseUrl: "https://api.weather.gov/points/",
-          method: "OPTIONS",
-        },
-      ],
-    },
   }
+  //https://www.npmjs.com/package/gatsby-source-multi-api
+  // {
+  //   resolve: 'gatsby-source-multi-api',
+  //   options: {
+  //     "name": "testQ",
+  //     apis: [
+  //       {
+  //         //multiApi
+  //         endpoints: ["42,-71","100,10"],
+  //         baseUrl: "https://api.weather.gov/points/",
+  //         //method: "OPTIONS",
+  //       },
+  //     ],
+  //   },
+  // }
 ]
 };

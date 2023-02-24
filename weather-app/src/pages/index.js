@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from 'gatsby'
-import LocationSiteTemplate from "C:\Users\Public\Coding\weatherApp\weather-app\src\pages\locationSiteTemplate.jsx"
+import LocationSiteTemplate from "../templates/locationSiteTemplate"
 
 const pageStyles = {
   color: "#232129",
@@ -135,7 +135,7 @@ const IndexPage = ({data}) => {
       </h1>
       <p style={paragraphStyles}>
         Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-timeeeeeeeee. {data.multiApi} 😎 {data.site.siteMetadata.description} fler {data.NWSQuery} console.log({data})
+        update in real-timeeeeeeeee.  )
       <LocationSiteTemplate/>
       </p>
       <ul style={listStyles}>
