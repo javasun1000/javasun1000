@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from 'gatsby'
-import LocationSiteTemplate from "./locationSiteTemplate"
+import LocationSiteTemplate from "C:\Users\Public\Coding\weatherApp\weather-app\src\pages\locationSiteTemplate.jsx"
 
 const pageStyles = {
   color: "#232129",
