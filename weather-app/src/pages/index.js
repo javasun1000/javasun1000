@@ -1,4 +1,6 @@
 import * as React from "react"
+import { graphql } from 'gatsby'
+import LocationSiteTemplate from "./locationSiteTemplate"
 
 const pageStyles = {
   color: "#232129",
@@ -123,7 +125,7 @@ const links = [
   },
 ]
 
-const IndexPage = () => {
+const IndexPage = ({data}) => {
   return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>
@@ -133,7 +135,8 @@ const IndexPage = () => {
       </h1>
       <p style={paragraphStyles}>
         Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
+        update in real-timeeeeeeeee. {data.multiApi} 😎 {data.site.siteMetadata.description} fler {data.NWSQuery} console.log({data})
+      <LocationSiteTemplate/>
       </p>
       <ul style={listStyles}>
         <li style={docLinkStyle}>
@@ -172,5 +175,22 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+export const query = graphql`
+query HomePageQuery {
+      site {
+        siteMetadata {
+          title,
+          description,
+          siteUrl
+        }
+        
+      }
+      
+       
+      
+      
+    
+
+  }`
 
 export const Head = () => <title>Home Page</title>
