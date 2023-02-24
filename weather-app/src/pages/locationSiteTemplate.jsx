@@ -29,31 +29,31 @@ class LocationListComponent extends React.Component {
         //if gatsby-node calls this component multiple times, this resets the state.
         return this.state;
     }
+    render() {
+        //for each iteration that gatsby-node is invoking this component, 
+        //create a local data object within render() to accept the data stored in the state,
+        //as you cannot call the data from state directly from the constructor above
+        const { data } = this.state;
+        const { location } = this.props;
     
-}
-
-render() {
-    //for each iteration that gatsby-node is invoking this component, 
-    //create a local data object within render() to accept the data stored in the state,
-    //as you cannot call the data from state directly from the constructor above
-    const { data } = this.state;
-    const { location } = this.props;
-
-    return (
-        <div>
-            <div className="blorp">
-                {data.map((info) =>
-                <div>
-                    {info.properties.relativeLocation.properties.city}
+        return (
+            <div>
+                <div className="blorp">
+                    {data.map((info) =>
+                    <div>
+                        {info.properties.relativeLocation.properties.city}
+                    </div>
+                    )}
                 </div>
-                )}
+                <div className="blorp">
+                    {location}
+                </div>
             </div>
-            <div className="blorp">
-                {location}
-            </div>
-        </div>
-        
-    )
-
+            
+        )
+    
+    
+    }
 
 }
+
